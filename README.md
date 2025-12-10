@@ -3,7 +3,7 @@ Overview
 The process of writing the synthesizable Verilog code for complex digital circuits from scratch is wearisome and error prone. To bridge the gap between high level design ideas and the final correct HDL code, we want to build a smart system that can take a simple, natural language description and generate the corresponding Verilog module. 
 The project is motivated by the growing convergence of Artificial Intelligence and Electronic Design Automation (EDA). Capitalizing on the potential of large language models (LLMs), we aim to demonstrate connecting powerful AI models with fundamental digital design principles. This tool will act as an intelligent Design assistant, automating the most tedious part of the design flow-writing RTL code.  
 Techniques  
-
+![my image](workflow_diagram.png)
 This project was designed to be feasible with the constraints of a single GPU setup (specifically, a Nvidia TI 3080) therefore a 1 bit llama3 pre-trained model was used.  
 Dataset Curation: The PyraNet-Verilog dataset was used as it had both prompts and output code. The dataset was scrubbed to include only code compiled successfully into ~150,000 samples. The stage 1 Fintuning used 40,000 samples fractioned by 4 categories of basic gates (NOT, AND, OR, NOR, XOR); adders, full adders ; MUXs ; and decoders, encoders so that a total of 50,000 final samples were used to finetune the data. 
 
